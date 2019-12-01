@@ -1,0 +1,19 @@
+{:paths ["resources" "src"]
+ :deps {org.clojure/clojure {:mvn/version "RELEASE"}}
+ :aliases
+ {:test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "RELEASE"}}}
+  :runner
+    {:extra-deps {com.cognitect/test-runner
+                  {:git/url "https://github.com/cognitect-labs/test-runner"
+                   :sha "76568540e7f40268ad2b646110f237a60295fa3c"}}
+     :extra-paths ["test"]
+     :main-opts ["-m" "cognitect.test-runner"
+                 "-d" "test"]}
+   
+  :rebel {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}
+                       nrepl {:mvn/version "0.3.1"}
+                       org.clojure/test.check {:mvn/version "0.10.0"}
+                       cider/cider-nrepl {:mvn/version "0.21.1"}}
+          :extra-paths ["user"]
+          :main-opts  ["-m" "repl" "noblepayne.advent2019.day1"]}}}
