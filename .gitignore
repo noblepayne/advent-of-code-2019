@@ -12,3 +12,4 @@ pom.xml.asc
 .hgignore
 .hg/
 .rebel_readline_history
+*.swp
