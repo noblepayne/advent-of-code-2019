@@ -20,11 +20,11 @@
       {:init (fn []
                ; HACK: rebel-readline doesn't have a convenient way to change init ns (it's always `user`).
                ; See https://github.com/bhauman/rebel-readline/issues/157.
-               (start-server :port 9999 :middleware ["cider.nrepl/cider-middleware"])
+               (start-server :port 9998 :middleware ["cider.nrepl/cider-middleware"])
                (doto
                  (clojure.java.io/file ".nrepl-port")
                  .deleteOnExit
-                 (spit 9999))
+                 (spit 9998))
                (when (some? init-ns)
                  (let [init-ns (symbol init-ns)]
                    (require init-ns)
