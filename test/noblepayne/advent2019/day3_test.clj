@@ -18,7 +18,8 @@
 
 (deftest provided-test-1
   (testing "p1 test 1"
-    (is (= 6))))
+    (is (= 6
+           (find-closest-intersection testdata-1)))))
 
 
 (deftest provided-test-2

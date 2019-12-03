@@ -2,16 +2,11 @@
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
-(defn parse-input []
+(defn parse-input [input]
   (mapv #(Integer/parseInt %)
-    (-> "day2p1.txt"
-        io/resource
-        slurp
+    (-> input
         str/trim
         (str/split #","))))
-
-; (def input-data (parse-input))
-; (def data (assoc input-data 1 12 2 2))
 
 (defn init-state [data]
   {:program data
