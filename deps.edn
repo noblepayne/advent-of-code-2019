@@ -16,4 +16,4 @@
                        org.clojure/test.check {:mvn/version "0.10.0"}
                        cider/cider-nrepl {:mvn/version "0.21.1"}}
           :extra-paths ["user"]
-          :main-opts  ["-m" "repl" "noblepayne.advent2019.day3"]}}}
+          :main-opts  ["-m" "repl" "noblepayne.advent2019.day4"]}}}
