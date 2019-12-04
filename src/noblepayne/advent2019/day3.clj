@@ -45,13 +45,13 @@
   (apply set/intersection
          (map line-location-set lines)))
 
-(defn manhatten-distance [[x1 y1] [x2 y2]]
+(defn manhattan-distance [[x1 y1] [x2 y2]]
   (+ (Math/abs (- y2 y1))
      (Math/abs (- x2 x1))))
 
 (defn find-closest-intersection [lines]
   (let [intersections (line-intersections lines)
-        distances (map #(manhatten-distance [0 0] %)
+        distances (map #(manhattan-distance [0 0] %)
                        intersections)]
     (apply min distances))) 
 
