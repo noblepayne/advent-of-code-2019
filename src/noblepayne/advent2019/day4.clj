@@ -8,12 +8,6 @@
          (str/trim-newline input)
          #"-")))
 
-(defn number-of-digits [n]
-  (count (str n)))
-
-(defn six-digits? [n]
-  (= 6 (number-of-digits n)))
-
 (defn increasing? [n]
   (apply <= (map #(Integer/parseInt (str %)) (str n))))
 
@@ -33,13 +27,11 @@
               parts))))
   
 (defn passes-tests-p1? [n]
-  (and (six-digits? n)
-       (increasing? n)
+  (and (increasing? n)
        (repeating-digit? n)))
 
 (defn passes-tests-p2? [n]
-  (and (six-digits? n)
-       (increasing? n)
+  (and (increasing? n)
        (repeating-digit-only-two? n)))
 
 (defn count-passing [testfn lb ub]
