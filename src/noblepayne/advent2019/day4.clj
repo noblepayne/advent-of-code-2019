@@ -1,7 +1,6 @@
 (ns noblepayne.advent2019.day4
   (:require [clojure.java.io :as io]
-            [clojure.string :as str]
-            [clojure.set :as set]))
+            [clojure.string :as str]))
 
 (defn parse-input [input]
   (map #(Integer/parseInt %)
