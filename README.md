@@ -7,8 +7,8 @@ Install [Clojure](https://clojure.org/guides/getting_started). Installing a JRE 
 
 ### REPL
 An nrepl-enabled rebel-readline REPL is available by running
-```clj -A:rebel```
+```clj -A:rebel```.
 
 ### Tests
 Run tests via
-```clj -A:runner```
+```clj -A:runner```.
