@@ -8,8 +8,6 @@
         str/trim
         (str/split #","))))
 
-(def data (-> "day5p1.txt" io/resource slurp parse-input))
-
 (defn init-state [data input]
   {:program data
    :input [input]
@@ -106,3 +104,11 @@
 
 (defn solve2 [input]
   (peek (:output (run input 5))))
+
+(comment
+  (let [data (-> "day5p1.txt" io/resource slurp parse-input)]
+    (println
+      (solve1 data))
+    (println
+      (solve2 data))))
+
